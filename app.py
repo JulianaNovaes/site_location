@@ -31,11 +31,8 @@ with col1:
     geo = st.slider("Geology", min_value=0, max_value=3, step=1)
 
     confirm_button = st.button("Confirmy my choices")
-    download_button = st.download_button("Download File", "file:///tmp/map.txt")
+    download_button = st.download_button("Download File", "/tmp/map.txt")
 
 with col2:
     if confirm_button:
         on_confirm_button_clicked(pop, rail, geo)
-
-    if download_button:
-        on_download_button_clicked()
