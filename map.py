@@ -109,7 +109,7 @@ def save_file(combined_map: np.array) -> None:
     file.close()
 
 
-def update_plot(pop_level: int, rail_level: int, geo_level: int) -> None:
+def update_plot(pop_level: int, rail_level: int, geo_level: int, streamlit_run: boolean = False) -> None:
     """
     This function updates the plot after user input
 
@@ -126,10 +126,16 @@ def update_plot(pop_level: int, rail_level: int, geo_level: int) -> None:
     # Plotting map
     fig = plt.figure()
     plt.imshow(map_plot, cmap="gray")
-    st.pyplot(fig)
+    
+    #If running the app through streamlit, it will plot the map with stramlit syntax
+    if streamlit_run:
+        st.pyplot(fig)
+   
+    else:
+        plt.show()
 
 
-def on_confirm_button_clicked(pop_level: int, rail_level: int, geo_level: int) -> None:
+def on_confirm_button_clicked(confirm_button, pop_level: int, rail_level: int, geo_level: int) -> None:
 
     """
     This function calls the update_plot function and passes the list of arguments containing the user iput
@@ -138,10 +144,16 @@ def on_confirm_button_clicked(pop_level: int, rail_level: int, geo_level: int) -
         args_list: list with user inputs for importance level of population, railway and geology
     """
 
-    update_plot(pop_level, rail_level, geo_level)
+    pop, rail, geo = args_list
+
+    pop_level = pop.value
+    rail_level = rail.value
+    geo_level = geo.value
+
+    update_plot(pop_level, rail_level, geo_level, streamlit_run=True)
 
 
-def on_download_button_clicked():
+def on_download_button_clicked(download_button):
 
     """
     This function generates the download file when button is clicked by user
