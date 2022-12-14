@@ -91,7 +91,7 @@ def save_file(combined_map: np.array) -> None:
         combined_map (np.array): combined maps containing scaled values for population, railway and geology
     """
     # Opening file to write
-    file = open("map.txt", "w+")
+    file = open("/tmp/map.txt", "w+")
 
     # Converting array into string
     content = str(combined_map.tolist())
