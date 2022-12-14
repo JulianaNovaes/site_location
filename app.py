@@ -32,7 +32,7 @@ with col1:
 
     confirm_button = st.button("Confirmy my choices")
     
-    with open("/tmp/map.txt", 'w') as f:
+    with open("/tmp/map.txt", 'r') as f:
             st.download_button('Download File', f, file_name='map.txt')
 
 with col2:
