@@ -31,7 +31,7 @@ with col1:
     geo = st.slider("Geology", min_value=0, max_value=3, step=1)
 
     confirm_button = st.button("Confirmy my choices")
-    download_button = st.download_button("Download File")
+    download_button = st.download_button("Download File", "file:///tmp/map.txt")
 
 with col2:
     if confirm_button:
