@@ -1,6 +1,6 @@
 numpy==1.23.5
 demjson3>=3.0.5
-python-csv==0.0.13
+python-csv==0.0.10
 matplotlib==3.6.2
 requests==2.28.1
 pytest==7.2.0
