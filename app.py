@@ -6,8 +6,6 @@ from map import (
     combine_maps,
     save_file,
     update_plot,
-    on_confirm_button_clicked,
-    on_download_button_clicked,
 )
 
 st.set_page_config(page_title="Site Location Project")
