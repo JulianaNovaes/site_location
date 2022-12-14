@@ -1,5 +1,4 @@
 import numpy as np
-from typing import bool
 import csv
 import matplotlib.pyplot as plt
 import webbrowser
@@ -103,7 +102,7 @@ def save_file(combined_map: np.array) -> None:
 
 
 def update_plot(
-    pop_level: int, rail_level: int, geo_level: int, streamlit_run: bool = False
+    pop_level: int, rail_level: int, geo_level: int, streamlit_run: bool = True
 ) -> None:
     """
     This function updates the plot after user input
@@ -122,16 +121,15 @@ def update_plot(
     plt.imshow(map_plot, cmap="gray")
 
     # If running the app through streamlit, it will plot the map with stramlit syntax
-    if streamlit_run:
+    if streamlit_run is True:
+
         st.pyplot(fig)
 
     else:
         plt.show()
 
 
-def on_confirm_button_clicked(
-    confirm_button, pop_level: int, rail_level: int, geo_level: int
-) -> None:
+def on_confirm_button_clicked(confirm_button, args_list: list) -> None:
 
     """
     This function calls the update_plot function and passes the list of arguments containing the user iput
@@ -145,7 +143,7 @@ def on_confirm_button_clicked(
     rail_level = rail.value
     geo_level = geo.value
 
-    update_plot(pop_level, rail_level, geo_level, streamlit_run=True)
+    update_plot(pop_level, rail_level, geo_level, streamlit_run=False)
 
 
 def on_download_button_clicked(download_button):
