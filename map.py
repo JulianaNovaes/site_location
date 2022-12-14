@@ -1,4 +1,5 @@
 import numpy as np
+from typing import bool
 import csv
 import matplotlib.pyplot as plt
 import webbrowser
@@ -7,10 +8,8 @@ import streamlit as st
 
 def load_file(file_name: str) -> np.array:
     """This function loads the raster files using the csv library
-
     Args:
         file_name (str): name of file to be added to path
-
     Returns:
         np.array: Array containing values for each of the elements (population, railway, geology)
     """
@@ -33,10 +32,8 @@ def load_file(file_name: str) -> np.array:
 def scale_map(combined_map: np.array):
 
     """This function scales the values in the array so that they are between 0-255
-
     Args:
         combined_map (np.array): values for population, railway and geology combined and not scaled
-
     Returns:
         scaled map
     """
@@ -51,11 +48,9 @@ def scale_map(combined_map: np.array):
 def multiply_array(chosen_map: list, level: int) -> np.array:
     """This function takes the values in one of the files (map) and multiplies it by the level of importance
         given by user input to that element (population, railway, geology)
-
     Args:
         chosen_map (list): name of element (population, railway, geology)
         level (int): importance given to element via user input
-
     Returns:
         np.array: array with values multiplied by level of importance
     """
@@ -70,7 +65,6 @@ def multiply_array(chosen_map: list, level: int) -> np.array:
 def combine_maps(pop_level, rail_level, geo_level):
 
     """This function merges the three maps (population, railway and geology) by summing their values
-
     Returns:
         function call (combined_map)
     """
@@ -94,7 +88,6 @@ def save_file(combined_map: np.array) -> None:
 
     """
     This function saves the combined map into a txt file for later download
-
     Args:
         combined_map (np.array): combined maps containing scaled values for population, railway and geology
     """
@@ -109,10 +102,11 @@ def save_file(combined_map: np.array) -> None:
     file.close()
 
 
-def update_plot(pop_level: int, rail_level: int, geo_level: int, streamlit_run: boolean = False) -> None:
+def update_plot(
+    pop_level: int, rail_level: int, geo_level: int, streamlit_run: bool = False
+) -> None:
     """
     This function updates the plot after user input
-
     Args:
         pop_level: level of importance attributed to population
         rail_level: level of importance attributed to railway
@@ -126,20 +120,21 @@ def update_plot(pop_level: int, rail_level: int, geo_level: int, streamlit_run: 
     # Plotting map
     fig = plt.figure()
     plt.imshow(map_plot, cmap="gray")
-    
-    #If running the app through streamlit, it will plot the map with stramlit syntax
+
+    # If running the app through streamlit, it will plot the map with stramlit syntax
     if streamlit_run:
         st.pyplot(fig)
-   
+
     else:
         plt.show()
 
 
-def on_confirm_button_clicked(confirm_button, pop_level: int, rail_level: int, geo_level: int) -> None:
+def on_confirm_button_clicked(
+    confirm_button, pop_level: int, rail_level: int, geo_level: int
+) -> None:
 
     """
     This function calls the update_plot function and passes the list of arguments containing the user iput
-
     Args:
         args_list: list with user inputs for importance level of population, railway and geology
     """
