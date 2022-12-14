@@ -36,4 +36,4 @@ with col2:
     if confirm_button:
         on_confirm_button_clicked(pop, rail, geo)
         with open("map.txt", 'r') as f:
-            st.download_button('Download File', f, file_name='map.txt')
+            st.download_button('Download File', f, file_name='/temp/map.txt')
