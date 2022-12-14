@@ -32,9 +32,8 @@ with col1:
 
     confirm_button = st.button("Confirmy my choices")
     
-    with open("map.txt", 'r') as f:
-            st.download_button('Download File', f, file_name='map.txt')
-
 with col2:
     if confirm_button:
         on_confirm_button_clicked(pop, rail, geo)
+        with open("map.txt", 'r') as f:
+            st.download_button('Download File', f, file_name='map.txt')
