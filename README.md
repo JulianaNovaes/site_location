@@ -15,15 +15,14 @@ This project aims to create a combined view of the UK map that is able to highli
 
 In this program, the user is invited to choose the level of importance he/she wants to attribute to each of these categories. The levels vary from 1 to 3. As soon as the user picks the importance level, it is invited to click on the `Confirm my choices` button, and then immediately the program will display the map with the choices reflected on it. 
 
-<img width="815" alt="image" src="https://user-images.githubusercontent.com/46926638/207829141-38a3156a-213f-448f-a234-d88406b966ce.png">
+<img width="390" alt="image" src="https://user-images.githubusercontent.com/46926638/207830760-0c65007c-6139-45e0-bb17-0fc2637aa6e0.png">
 
 
 ### Download the map 
 
 The user is also able to download the final result in the form of a raster file. In order to do so, it is invited to click on the `Download File` button that will appear under the map. 
 
-<img width="893" alt="image" src="https://user-images.githubusercontent.com/46926638/207828985-e6099a1f-28c0-4740-809d-9e9c2a9c165d.png">
-
+<img width="370" alt="image" src="https://user-images.githubusercontent.com/46926638/207830834-f540d0a6-3d6c-4b43-9bdf-a70a3439ae16.png">
 
 ## Packages and dependencies
 
