@@ -1,6 +1,7 @@
 import pytest
 import numpy as np
-from map import scale_map, multiply_array, combine_maps, update_plot
+from map import scale_map, multiply_array, save_file
+from os import path
 
 
 def test_multiply_array() -> None:
@@ -25,3 +26,15 @@ def test_scale_map() -> None:
 
     assert np.max(scaled_array) <= 255
     assert np.min(scaled_array) >= 0
+
+
+def test_save_file() -> None:
+    """
+    Checks if download file is being created after plot
+    """
+    sample_array = np.array([[405, 123, 294], [43, -98, -7]])
+    save_file(sample_array)
+
+    path_exists = path.exists("/tmp/map.txt")
+
+    assert path_exists is True
