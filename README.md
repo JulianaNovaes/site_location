@@ -52,5 +52,4 @@ Type `jupyter notebook` in your terminal, wait for the Jupyter Notebook console 
 The `map.py` file contains all the functions that allow the program to run. It contains the entire process, from the loading of the files to the plotting of the map.
 
 ## Tests
-Tests were built using `pytest` and can be found in the `map_test.py` file. The report containing the results of the tests 
-can be found in the `report.html` file.
+Tests were built using `pytest` and can be found in the `map_test.py` file. If you wish to run the tests, please type `python -m pytest map_test.py` in the project directory.
