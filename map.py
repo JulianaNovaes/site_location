@@ -3,6 +3,7 @@ import csv
 import matplotlib.pyplot as plt
 import webbrowser
 import streamlit as st
+from IPython.display import clear_output
 
 
 def load_file(file_name: str) -> np.array:
@@ -127,6 +128,8 @@ def update_plot(
 
     else:
         plt.show()
+        clear_output(wait=True)
+
 
 
 def on_confirm_button_clicked(confirm_button, args_list: list) -> None:
