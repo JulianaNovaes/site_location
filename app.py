@@ -37,5 +37,5 @@ with col1:
 with col2:
     if confirm_button:
         update_plot(pop, rail, geo)
-        with open("map.txt", 'r') as f:
+        with open("/tmp/map.txt", 'r') as f:
             st.download_button('Download File', f, file_name='/temp/map.txt')
