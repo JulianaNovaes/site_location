@@ -41,6 +41,12 @@ Both the website and notebook rely on the same backend file, which is `map.py`. 
 <img width="787" alt="image" src="https://user-images.githubusercontent.com/46926638/207830373-25e9e15c-475f-4016-b6ff-31dccaacb399.png">
 
 
+### Running the notebook locally 
+
+In order to run the notebook, first clone this repository and install the requirements by using the command 
+`pip install -r requirements.txt`
+Type `jupyter notebook` in your terminal, wait for the Jupyter Notebook console to pop up then and open the file `notebook_app.ipynb` using the console. Follow the instructions inside the `ipynb` file. 
+
 ## Pipeline
 
 The `map.py` file contains all the functions that allow the program to run. It contains the entire process, from the loading of the files to the plotting of the map.
