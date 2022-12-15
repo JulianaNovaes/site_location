@@ -13,7 +13,7 @@ This project aims to create a combined view of the UK map that is able to highli
 
 ### User input: importance of population, railway and geology
 
-In this program, the user is invited to choose the level of importance he/she wants to attribute to each of these categories. The levels vary from 1 to 3. As soon as the user picks the importance level, it is invited to click on the `Confirm my choices` button, and then immediately the program will display the map with the choices reflected on it. 
+In this program, the user is invited to choose the level of importance he/she wants to attribute to each of these categories. The levels vary from 0 to 3 for geology and railway and from 1 to 3 for population. The reason why population is different is because the facotry will need people to work on it regardless. As soon as the user picks the importance level, it is invited to click on the `Confirm my choices` button, and then immediately the program will display the map with the choices reflected on it. 
 
 <img width="390" alt="image" src="https://user-images.githubusercontent.com/46926638/207830760-0c65007c-6139-45e0-bb17-0fc2637aa6e0.png">
 
