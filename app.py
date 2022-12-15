@@ -18,6 +18,10 @@ st.markdown(
     "This project aims to create a combined view of the UK map that is able to highlight the best areas to build a factory that makes rock aggregates based on three factors: population, railway networks and geology. "
 )
 
+st.markdown(
+"Choose the level of importance you want to attribute to population, railway or geology. If you would like, you can also download the output file."
+)
+
 col1, col2 = st.columns(2)
 
 with col1:
